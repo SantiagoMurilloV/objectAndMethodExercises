@@ -10,27 +10,27 @@
 
 const products = [
     {
-        "name": "Camisa",
+        "name": "Shirt",
         "price": 25.99,
         "discount": 0.2
     },
     {
-        "name": "Pantalón",
+        "name": "Pants",
         "price": 55.99,
         "discount": 0.1
     },
     {
-        "name": "Chaqueta",
+        "name": "Jacket",
         "price": 80.99,
         "discount": 0.15
     },
     {
-        "name": "Zapatos",
+        "name": "Shoes",
         "price": 60.99,
         "discount": 0.25
     },
     {
-        "name": "gorra",
+        "name": "cap",
         "price": 15.99,
         "discount": 0.05
     }
