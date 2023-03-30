@@ -14,10 +14,29 @@ const books = [
     { title: '1984', author: 'George Orwell', year: 1949 }
 ];
 
+const k = 2;
 const minimunTitleLength = 21;
+
+function bookStore(books, k){
+
 let filterBooks = [];
-filterBooks = books.filter(book => book.title.length < minimunTitleLength);
+let sortBooks = [];
 
-console.log("\nbooks with a length less than 21 are:");
-console.log(filterBooks)
+switch(k){
+    case 1:
+        filterBooks = books.filter(book => book.title.length < minimunTitleLength);
+        console.log("\nbooks with a length less than 21 are:");
+        return filterBooks;
+        break;
+    case 2:
+        sortBooks = books.map(book =>({title : book.title , author: book.author, year : book.year}));
+        console.log("\n new array with order\n");
+        return sortBooks.sort((book1, book2) => book1.year - book2.year);;
+    default:
+        return "";
 
+}
+}
+
+
+console.log(bookStore(books, k))

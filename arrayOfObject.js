@@ -11,7 +11,7 @@ const products = [
     { id: 5, name: 'Socks', price: 5 }
 ];
 
-const idProduct = 4;
+const idProduct = 5;
 
 function find(products,idProduct){
     let findProduct = [];
