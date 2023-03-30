@@ -5,7 +5,10 @@
 
 
 
-
+// K = 1 filter the product for a especific price 
+// k = 2 order the product by price from lowest to highest
+// k = 3 create a new array with name and price
+// k = 4 find a product for the name 
 
 
 function store(products, k){
@@ -73,6 +76,6 @@ const products = [
     }
 ];
 
-console.log(store(products, 4))
+console.log(store(products, 2))
 
 
