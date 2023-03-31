@@ -97,6 +97,6 @@ console.log(inventory(products))
 
     
 function bill(products, custumers){
-    let custumer = custumers.find(custumerr => custumerr.name === "jose");
+    let custumer = custumers.find(custumerr => custumerr.name === "Jhon");
     console.log("Clientes :  "+ custumer);
 }
