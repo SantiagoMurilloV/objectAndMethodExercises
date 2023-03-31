@@ -36,38 +36,38 @@ const products = [
     }
 ]
 
-const clientes = [
+const customers = [
     {
-        nombre: 'Juan',
-        apellido: 'Pérez',
-        edad: 25,
-        direccion: {
-            calle: 'Av. Libertad',
-            numero: 123,
-            ciudad: 'Buenos Aires',
-            pais: 'Argentina'
-        }
+        name: 'John',
+        surname: 'Perez',
+        age: 25,
+        address: {
+            Street: 'Av. freedom',
+            number: 123,
+            city: 'Buenos Aires',
+            country: 'ARGENTINA'
+            }
     },
     {
-        nombre: 'María',
-        apellido: 'García',
-        edad: 30,
-        direccion: {
-            calle: 'Calle 10',
-            numero: 456,
-            ciudad: 'Ciudad de México',
-            pais: 'México'
-        }
+        name: 'Mary',
+        surname: 'Garcia',
+        age: 30,
+        address: {
+            street: 'Calle 10',
+            number: 456,
+            city: 'Mexico City',
+            country: 'MEXICO'
+            }
     },
     {
-        nombre: 'Pedro',
-        apellido: 'Martínez',
-        edad: 40,
-        direccion: {
-            calle: 'Rua Augusta',
-            numero: 789,
-            ciudad: 'São Paulo',
-            pais: 'Brasil'
+        name: 'Peter',
+        surname: 'Martinez',
+        age: 40,
+        address: {
+            street: 'Rua Augusta',
+            number: 789,
+            city: 'São Paulo',
+            country: 'BRAZIL'
         }
     }
 ]
@@ -94,11 +94,9 @@ function inventory(products){
 
 console.log(inventory(products))
 
-console.log("nombre del comprador:")
 
-clientes.find(cliente => cliente.name === "jose")
-
-
-function sold(productWithDiscount){
     
+function bill(products, custumers){
+    let custumer = custumers.find(custumerr => custumerr.name === "jose");
+    console.log("Clientes :  "+ custumer);
 }
