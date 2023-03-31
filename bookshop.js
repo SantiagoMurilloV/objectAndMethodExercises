@@ -31,7 +31,7 @@ switch(k){
     case 2:
         sortBooks = books.map(book =>({title : book.title , author: book.author, year : book.year}));
         console.log("\n new array with order\n");
-        return sortBooks.sort((book1, book2) => book1.year - book2.year);;
+        return sortBooks.sort();
     default:
         return "";
 

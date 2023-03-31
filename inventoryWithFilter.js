@@ -36,13 +36,50 @@ const products = [
     }
 ]
 
+const clientes = [
+    {
+        nombre: 'Juan',
+        apellido: 'Pérez',
+        edad: 25,
+        direccion: {
+            calle: 'Av. Libertad',
+            numero: 123,
+            ciudad: 'Buenos Aires',
+            pais: 'Argentina'
+        }
+    },
+    {
+        nombre: 'María',
+        apellido: 'García',
+        edad: 30,
+        direccion: {
+            calle: 'Calle 10',
+            numero: 456,
+            ciudad: 'Ciudad de México',
+            pais: 'México'
+        }
+    },
+    {
+        nombre: 'Pedro',
+        apellido: 'Martínez',
+        edad: 40,
+        direccion: {
+            calle: 'Rua Augusta',
+            numero: 789,
+            ciudad: 'São Paulo',
+            pais: 'Brasil'
+        }
+    }
+]
+
+let productWithDiscount = [];
 
 function inventory(products){
 
 
     let expensive = [];
     let chep = [];
-    let productWithDiscount = [];
+    
 
     expensive = products.filter(product => product.price > 50);
 
@@ -56,3 +93,12 @@ function inventory(products){
 
 
 console.log(inventory(products))
+
+console.log("nombre del comprador:")
+
+clientes.find(cliente => cliente.name === "jose")
+
+
+function sold(productWithDiscount){
+    
+}
