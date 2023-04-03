@@ -42,7 +42,7 @@ const customers = [
         surname: 'Perez',
         age: 25,
         address: {
-            Street: 'Av. freedom',
+            street: 'Av. freedom',
             number: 123,
             city: 'Buenos Aires',
             country: 'ARGENTINA'
@@ -74,29 +74,47 @@ const customers = [
 
 let productWithDiscount = [];
 
-function inventory(products){
+function inventory(prod){
 
 
     let expensive = [];
     let chep = [];
     
 
-    expensive = products.filter(product => product.price > 50);
+    expensive = prod.filter(product => product.price > 50);
 
-    chep = products.filter(product => product.price < 50);
+    chep = prod.filter(product => product.price < 50);
 
-    productWithDiscount = products.map( product =>({name: product.name , price: product.price, newPrice: product.price-(product.discount*product.price)}))
+    productWithDiscount = prod.map( product =>({name: product.name , price: product.price, newPrice: product.price-(product.discount*product.price)}))
 
     return productWithDiscount
 
 }
 
+inventory(products)
 
-console.log(inventory(products))
+console.log(productWithDiscount)
 
 
-    
-function bill(products, custumers){
-    let custumer = custumers.find(custumerr => custumerr.name === "Jhon");
-    console.log("Clientes :  "+ custumer);
+const CreateBill = (userName, productName, productQuant) => {
+    let addressC = [];
+    let name_ = customers.find(c => c.name === userName && c.surname ).name;
+    let lastName_ = customers.find(c => c.name === userName && c.surname ).surname;
+    let address_ = customers.find(c => c.name === userName && c.surname ).address;
+    let productName_ = productWithDiscount.find(product => product.name === productName);
+    let total = 0;
+    if (productName_ && productName_.name === productName){
+        total = productQuant * productName_.newPrice;
+        console.log(`\nUser Name: ${name_} ${lastName_}`);
+        console.log(`Address: ${address_.street}, ${address_.city}`);
+        console.log(`Product Name: ${productName_.name}`);
+        console.log(`Quantity: ${productQuant}`);
+        console.log(`Price with discount: ${productName_.newPrice}`);
+        console.log(`Total: ${total}\n`);
+    } else {
+        console.log("Product not found");
+    }
 }
+
+let userN = "Peter";
+CreateBill(userN, "Shirt", 2);
